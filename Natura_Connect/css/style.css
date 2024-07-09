@@ -1,0 +1,127 @@
+:root {
+    --color-light: #FEFCFB;
+    --color-orange: #F5821F;
+    --font-primary: "Rubik", sans-serif;
+}
+
+body {
+    background-color: var(--color-light) !important;
+    font-family: var(--font-primary) !important;
+}
+
+main {
+    --bs-gutter-x: 0rem !important;
+}
+
+.text-orange {
+    color: var(--color-orange) !important;
+}
+
+.text-light {
+    color: var(--color-light) !important;
+}
+
+.active {
+    border: none !important;
+    background-color: var(--color-orange) !important;
+    font-weight: 500 !important;
+}
+
+.btn-default {
+    border: none !important;
+    background-color: #FFF5EC !important;
+    font-weight: 500 !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: 3px solid #F5821F !important;
+    background-color: #FEFCFB !important;
+}
+
+#email, #senha {
+    width: 25rem;
+}
+
+#senha::placeholder, #email::placeholder {
+    color: #A6A6A6;
+    font-weight: 500;
+}
+
+.cadastro, .esqueci {
+    font-size: 0.8rem !important;
+    font-weight: 400;
+    border: none !important;
+}
+
+.cadastre {
+    padding: 0 !important;
+    margin-top: 0 !important;
+    font-size: 0.8rem !important;
+    border: none !important;
+}
+
+.entrar {
+    background-color: var(--color-orange) !important;
+}
+
+.ladoBranco {
+    background-color: #FEFCFB;
+    width: 70%;
+    height: 100vh;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.ladoLaranja {
+    background-color: var(--color-orange) !important;
+    width: 30%;
+    height: 100vh;
+}
+
+.logo {
+    width: 14rem;;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+    
+    .ladoBranco {
+        width: 100%;
+        margin-top: 25rem;
+    }
+    .login, .ladoLaranja, .ladoBranco {
+        display: none;
+    }
+
+    #email, #senha {
+        width: 20rem;
+    }
+
+    .cadastre, .cadastro, .esqueci {
+        font-size: 0.7rem !important;
+    }
+
+    .ladoBranco {
+        position: absolute;
+        background-color: transparent;
+    }
+
+    header {
+        display: block;
+        background-image: url(../assets/forma.svg);
+        background-size: cover;
+    }
+}
+
+@media(min-width: 769px) {
+    .forma {
+        display: none;
+    }
+
+    header {
+        display: none;
+    }
+}
