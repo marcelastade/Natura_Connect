@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natura Connect</title>
+
+    <!--  Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+     <!-- Minha CSS -->
+     <link rel="stylesheet" href="./css/carteira.css">
+
+     <!-- Chamada da CSS do BS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- BS Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <header class="color-light shadow d-flex justify-content-center align-items-center">
+        <nav class="navbar navbar-expand-lg background-nav">
+            <a class="navbar-brand logo" href="#">
+                <img class="logoHeader" src="./assets/logo.svg" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-filter-right"></i>
+            </button>
+            <div class="collapse navbar-collapse d-flex justify-content-end align-items-center me-5" id="navbarNav">
+                <ul class="navbar-nav">
+                    <div class="d-flex">
+                        <a class="nav-link font-nav text-orange fw-medium me-2 fs-5" href="#">
+                            CARTEIRA
+                        </a>                                              
+                    </div>
+                    <div class="d-flex">
+                        <a class="nav-link font-nav text-orange fw-medium me-2 fs-5" href="#">
+                            EST0QUE
+                        </a>                                              
+                    </div>
+                </ul>
+                <ul class="navbar-nav">
+                    <a class="nav-link font-nav text-orange fw-medium me-2 fs-5" href="#">
+                        <i class="bi bi-person-circle text-orange fs-1"></i>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <figure class="mb-0">
+            <img class="onda" src="./assets/ondaCarteira.svg">
+        </figure>
+        <section class="container-title d-flex flex-column">
+            <div class="title d-flex flex-row">
+                <i class="bi bi-wallet2 fs-2"></i>
+                <p class="mb-0 fs-3 fw-semibold ms-2">CARTEIRA DE CLIENTES
+            </div>
+            <div class="filtro d-flex p-4 flex-column">
+                <div class="title d-flex flex-row mt-2">
+                    <i class="bi bi-funnel fs-4"></i>
+                    <div class="mb-0 fs-5 fw-medium ms-2">FILTRAR POR
+                        <a class="nav-link dropdown-toggle font-nav d-inline ms-1 dropdown-check" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        </a>
+                        <ul class="dropdown-menu shadow">
+                            <li class="nav-item me-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fw-medium fs-6" for="flexCheckDefault">
+                                    ATIVO
+                                </label>
+                            </li>
+                            <li class="nav-item me-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label fw-medium fs-6" for="flexCheckChecked">
+                                INATIVO
+                                </label>
+                            </li>
+                            <li class="nav-item me-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label fw-medium fs-6" for="flexCheckChecked">
+                                MAIS RECENTES
+                                </label>
+                            </li>
+                            <li class="nav-item me-2">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label fw-medium fs-6" for="flexCheckChecked">
+                                MAIS ANTIGOS
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="checkBox">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label fw-medium fs-6" for="flexCheckDefault">
+                                    ATIVO
+                                </label>
+                            </div>
+                            <div class="form-check ms-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label fw-medium fs-6" for="flexCheckChecked">
+                                INATIVO
+                                </label>
+                            </div>
+                            <div class="form-check ms-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label fw-medium fs-6" for="flexCheckChecked">
+                                MAIS RECENTES
+                                </label>
+                            </div>
+                            <div class="form-check ms-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label fw-medium fs-6" for="flexCheckChecked">
+                                MAIS ANTIGOS
+                                </label>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="carteira" class="container-light pt-3">
+            <div class="carousel carteira" id="carouselExample1">
+                <div class="carousel-inner">
+                    <div class="carousel-item carteira-item active">
+                        <div class="col-md-3">
+                            <div class="card-carousel color-light shadow">
+                                <p id="status" class="statusCliente fw-medium d-flex justify-content-end align-items-center me-4 mb-0 mt-1"><i class="bi bi-dot fs-3"></i>ATIVO</p>
+                                <div class="container-card d-flex justify-content-center align-items-center flex-column">
+                                    <figure>
+                                        <img class="foto" src="./assets/foto.svg" alt="">
+                                    </figure>
+                                    <h3 class="fs-4">BRUNA FARIAS</h3>
+                                    <div class="contato d-flex flex-column justify-content-start align-items-start mt-2">
+                                        <div class="endereco d-flex flex-row">
+                                            <i class="bi bi-geo-alt fs-5"></i>
+                                            <p class="endereco mb-0 fw-light ms-2">Rua Alameda Silva, 98</p>
+                                        </div>
+                                        <div class="fone d-flex flex-row">
+                                            <i class="bi bi-whatsapp"></i>
+                                            <p class="fone mb-0 fw-light ms-2">(11) 95046-5530</p>
+                                        </div>
+                                    </div>
+                                    <div class="infos d-flex mt-2">
+                                        <div class="cliente mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="desde fw-medium text-orange mb-0">CLIENTE DESDE</p>
+                                            <p class="fw-light">01/02/2024</p>
+                                        </div>
+                                        <div class="compra mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="ultima fw-medium text-orange ms-4 mb-0">ÚLTIMA COMPRA</p>
+                                            <p class="fw-light ms-4">01/02/2024</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item carteira-item">
+                        <div class="col-md-3">
+                            <div class="card-carousel color-light shadow">
+                                <p id="status" class="statusCliente fw-medium d-flex justify-content-end align-items-center me-4 mb-0 mt-1"><i class="bi bi-dot fs-3"></i>ATIVO</p>
+                                <div class="container-card d-flex justify-content-center align-items-center flex-column">
+                                    <figure>
+                                        <img class="foto" src="./assets/foto.svg" alt="">
+                                    </figure>
+                                    <h3 class="fs-4">CAROL FARIAS</h3>
+                                    <div class="contato d-flex flex-column justify-content-start align-items-start mt-2">
+                                        <div class="endereco d-flex flex-row">
+                                            <i class="bi bi-geo-alt fs-5"></i>
+                                            <p class="endereco mb-0 fw-light ms-2">Rua Alameda Silva, 98</p>
+                                        </div>
+                                        <div class="fone d-flex flex-row">
+                                            <i class="bi bi-whatsapp"></i>
+                                            <p class="fone mb-0 fw-light ms-2">(11) 95046-5530</p>
+                                        </div>
+                                    </div>
+                                    <div class="infos d-flex mt-2">
+                                        <div class="cliente mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="desde fw-medium text-orange mb-0">CLIENTE DESDE</p>
+                                            <p class="fw-light">01/02/2024</p>
+                                        </div>
+                                        <div class="compra mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="ultima fw-medium text-orange ms-4 mb-0">ÚLTIMA COMPRA</p>
+                                            <p class="fw-light ms-4">01/02/2024</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item carteira-item">
+                        <div class="col-md-3">
+                            <div class="card-carousel color-light shadow">
+                                <p id="status" class="statusCliente fw-medium d-flex justify-content-end align-items-center me-4 mb-0 mt-1"><i class="bi bi-dot fs-3"></i>ATIVO</p>
+                                <div class="container-card d-flex justify-content-center align-items-center flex-column">
+                                    <figure>
+                                        <img class="foto" src="./assets/foto.svg" alt="">
+                                    </figure>
+                                    <h3 class="fs-4">LUISA FARIAS</h3>
+                                    <div class="contato d-flex flex-column justify-content-start align-items-start mt-2">
+                                        <div class="endereco d-flex flex-row">
+                                            <i class="bi bi-geo-alt fs-5"></i>
+                                            <p class="endereco mb-0 fw-light ms-2">Rua Alameda Silva, 98</p>
+                                        </div>
+                                        <div class="fone d-flex flex-row">
+                                            <i class="bi bi-whatsapp"></i>
+                                            <p class="fone mb-0 fw-light ms-2">(11) 95046-5530</p>
+                                        </div>
+                                    </div>
+                                    <div class="infos d-flex mt-2">
+                                        <div class="cliente mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="desde fw-medium text-orange mb-0">CLIENTE DESDE</p>
+                                            <p class="fw-light">01/02/2024</p>
+                                        </div>
+                                        <div class="compra mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="ultima fw-medium text-orange ms-4 mb-0">ÚLTIMA COMPRA</p>
+                                            <p class="fw-light ms-4">01/02/2024</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item carteira-item">
+                        <div class="col-md-3">
+                            <div class="card-carousel color-light shadow">
+                                <p id="status" class="statusCliente fw-medium d-flex justify-content-end align-items-center me-4 mb-0 mt-1"><i class="bi bi-dot fs-3"></i>ATIVO</p>
+                                <div class="container-card d-flex justify-content-center align-items-center flex-column">
+                                    <figure>
+                                        <img class="foto" src="./assets/foto.svg" alt="">
+                                    </figure>
+                                    <h3 class="fs-4">MARI FARIAS</h3>
+                                    <div class="contato d-flex flex-column justify-content-start align-items-start mt-2">
+                                        <div class="endereco d-flex flex-row">
+                                            <i class="bi bi-geo-alt fs-5"></i>
+                                            <p class="endereco mb-0 fw-light ms-2">Rua Alameda Silva, 98</p>
+                                        </div>
+                                        <div class="fone d-flex flex-row">
+                                            <i class="bi bi-whatsapp"></i>
+                                            <p class="fone mb-0 fw-light ms-2">(11) 95046-5530</p>
+                                        </div>
+                                    </div>
+                                    <div class="infos d-flex mt-2">
+                                        <div class="cliente mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="desde fw-medium text-orange mb-0">CLIENTE DESDE</p>
+                                            <p class="fw-light">01/02/2024</p>
+                                        </div>
+                                        <div class="compra mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="ultima fw-medium text-orange ms-4 mb-0">ÚLTIMA COMPRA</p>
+                                            <p class="fw-light ms-4">01/02/2024</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>   
+                </div>            
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                <i class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></i>
+                <span class="visually-hidden">Next</span>
+                </button> 
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                <i class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></i>
+                <span class="visually-hidden">Previous</span>
+                </button>
+            </div>     
+        </section>
+        <section id="carteira2" class="container-light">
+            <div class="carousel carteira" id="carouselExample2">
+                <div class="carousel-inner">
+                    <div class="carousel-item carteira-item active">
+                        <div class="col-md-3">
+                            <div class="card-carousel color-light shadow">
+                                <p id="status" class="statusCliente fw-medium d-flex justify-content-end align-items-center me-4 mb-0 mt-1"><i class="bi bi-dot fs-3"></i>ATIVO</p>
+                                <div class="container-card d-flex justify-content-center align-items-center flex-column">
+                                    <figure>
+                                        <img class="foto" src="./assets/foto.svg" alt="">
+                                    </figure>
+                                    <h3 class="fs-4">BRUNA FARIAS</h3>
+                                    <div class="contato d-flex flex-column justify-content-start align-items-start mt-2">
+                                        <div class="endereco d-flex flex-row">
+                                            <i class="bi bi-geo-alt fs-5"></i>
+                                            <p class="endereco mb-0 fw-light ms-2">Rua Alameda Silva, 98</p>
+                                        </div>
+                                        <div class="fone d-flex flex-row">
+                                            <i class="bi bi-whatsapp"></i>
+                                            <p class="fone mb-0 fw-light ms-2">(11) 95046-5530</p>
+                                        </div>
+                                    </div>
+                                    <div class="infos d-flex mt-2">
+                                        <div class="cliente mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="desde fw-medium text-orange mb-0">CLIENTE DESDE</p>
+                                            <p class="fw-light">01/02/2024</p>
+                                        </div>
+                                        <div class="compra mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="ultima fw-medium text-orange ms-4 mb-0">ÚLTIMA COMPRA</p>
+                                            <p class="fw-light ms-4">01/02/2024</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item carteira-item">
+                        <div class="col-md-3">
+                            <div class="card-carousel color-light shadow">
+                                <p id="status" class="statusCliente fw-medium d-flex justify-content-end align-items-center me-4 mb-0 mt-1"><i class="bi bi-dot fs-3"></i>ATIVO</p>
+                                <div class="container-card d-flex justify-content-center align-items-center flex-column">
+                                    <figure>
+                                        <img class="foto" src="./assets/foto.svg" alt="">
+                                    </figure>
+                                    <h3 class="fs-4">CAROL FARIAS</h3>
+                                    <div class="contato d-flex flex-column justify-content-start align-items-start mt-2">
+                                        <div class="endereco d-flex flex-row">
+                                            <i class="bi bi-geo-alt fs-5"></i>
+                                            <p class="endereco mb-0 fw-light ms-2">Rua Alameda Silva, 98</p>
+                                        </div>
+                                        <div class="fone d-flex flex-row">
+                                            <i class="bi bi-whatsapp"></i>
+                                            <p class="fone mb-0 fw-light ms-2">(11) 95046-5530</p>
+                                        </div>
+                                    </div>
+                                    <div class="infos d-flex mt-2">
+                                        <div class="cliente mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="desde fw-medium text-orange mb-0">CLIENTE DESDE</p>
+                                            <p class="fw-light">01/02/2024</p>
+                                        </div>
+                                        <div class="compra mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="ultima fw-medium text-orange ms-4 mb-0">ÚLTIMA COMPRA</p>
+                                            <p class="fw-light ms-4">01/02/2024</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item carteira-item">
+                        <div class="col-md-3">
+                            <div class="card-carousel color-light shadow">
+                                <p id="status" class="statusCliente fw-medium d-flex justify-content-end align-items-center me-4 mb-0 mt-1"><i class="bi bi-dot fs-3"></i>ATIVO</p>
+                                <div class="container-card d-flex justify-content-center align-items-center flex-column">
+                                    <figure>
+                                        <img class="foto" src="./assets/foto.svg" alt="">
+                                    </figure>
+                                    <h3 class="fs-4">LUISA FARIAS</h3>
+                                    <div class="contato d-flex flex-column justify-content-start align-items-start mt-2">
+                                        <div class="endereco d-flex flex-row">
+                                            <i class="bi bi-geo-alt fs-5"></i>
+                                            <p class="endereco mb-0 fw-light ms-2">Rua Alameda Silva, 98</p>
+                                        </div>
+                                        <div class="fone d-flex flex-row">
+                                            <i class="bi bi-whatsapp"></i>
+                                            <p class="fone mb-0 fw-light ms-2">(11) 95046-5530</p>
+                                        </div>
+                                    </div>
+                                    <div class="infos d-flex mt-2">
+                                        <div class="cliente mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="desde fw-medium text-orange mb-0">CLIENTE DESDE</p>
+                                            <p class="fw-light">01/02/2024</p>
+                                        </div>
+                                        <div class="compra mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="ultima fw-medium text-orange ms-4 mb-0">ÚLTIMA COMPRA</p>
+                                            <p class="fw-light ms-4">01/02/2024</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item carteira-item">
+                        <div class="col-md-3">
+                            <div class="card-carousel color-light shadow">
+                                <p id="status" class="statusCliente fw-medium d-flex justify-content-end align-items-center me-4 mb-0 mt-1"><i class="bi bi-dot fs-3"></i>ATIVO</p>
+                                <div class="container-card d-flex justify-content-center align-items-center flex-column">
+                                    <figure>
+                                        <img class="foto" src="./assets/foto.svg" alt="">
+                                    </figure>
+                                    <h3 class="fs-4">MARI FARIAS</h3>
+                                    <div class="contato d-flex flex-column justify-content-start align-items-start mt-2">
+                                        <div class="endereco d-flex flex-row">
+                                            <i class="bi bi-geo-alt fs-5"></i>
+                                            <p class="endereco mb-0 fw-light ms-2">Rua Alameda Silva, 98</p>
+                                        </div>
+                                        <div class="fone d-flex flex-row">
+                                            <i class="bi bi-whatsapp"></i>
+                                            <p class="fone mb-0 fw-light ms-2">(11) 95046-5530</p>
+                                        </div>
+                                    </div>
+                                    <div class="infos d-flex mt-2">
+                                        <div class="cliente mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="desde fw-medium text-orange mb-0">CLIENTE DESDE</p>
+                                            <p class="fw-light">01/02/2024</p>
+                                        </div>
+                                        <div class="compra mt-3 d-flex flex-column justify-content-center align-items-center">
+                                            <p class="ultima fw-medium text-orange ms-4 mb-0">ÚLTIMA COMPRA</p>
+                                            <p class="fw-light ms-4">01/02/2024</p>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>   
+                </div>            
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                <i class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></i>
+                <span class="visually-hidden">Next</span>
+                </button> 
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                <i class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></i>
+                <span class="visually-hidden">Previous</span>
+                </button>
+            </div>     
+        </section>
+    </main>
+    <footer class="shadow-lg pt-2 pb-2 d-flex justify-content-center align-items-center color-light">
+        <p class="fw-regular mb-0">©TECH FIVE 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2024</p>
+    </footer>
+    <!-- Chamada JS do BS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        var items = document.querySelectorAll('.carteira .carteira-item');
+        items.forEach((e)=>{
+            const slide = 3;
+            let next = e.nextElementSibling;
+            for(var i=0; i<slide; i++) {
+                if(!next) {
+                    next = items[0]
+                }
+                let clonechild = next.cloneNode(true);
+                e.appendChild(clonechild.children[0]);
+                next = next.nextElementSibling;
+            }
+        })
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const statusElements = document.getElementsByClassName('statusCliente');
+            Array.from(statusElements).forEach(status => {
+                const text = status.textContent || status.innerText;
+                switch (text.trim()) {
+                    case 'ATIVO':
+                        status.classList.add('text-green');
+                        break;
+                    case 'INATIVO':
+                        status.classList.add('text-red');
+                        break;
+                    default:
+                        // No change or default color
+                        break;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
